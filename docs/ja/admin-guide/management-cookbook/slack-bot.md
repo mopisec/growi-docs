@@ -27,9 +27,9 @@ Slack のワークスペースに GROWI Bot を導入するには、Slack アプ
 
 ![slash-commands-create-new-command](./images/slash-commands-create-new-command.png)
 
-- Command に growi と入力してください。
+- Command に /growi と入力してください。
 - RequestURL には、ドメイン名/\_api/v3/slack-bot と入力してください。
-- Short Description も入力必須なため、適当なご説明を入力してください。
+- Short Description も入力必須のため、適当なご説明を入力してください。
 - Usage Hint に関しては任意なので、適宜入力してください。
 - Escape channels, users, and links sent to your app に関しては任意なので、適宜入力してください。
 - 入力が完了したら、Save をクリックしてください。

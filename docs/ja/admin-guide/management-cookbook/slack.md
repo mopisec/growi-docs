@@ -3,7 +3,7 @@
 ## 概要
 
 GROWI では、 Incoming Webhook を利用した Slack 通知が可能です。  
-1つの GROWI につき 1つのワークスペースを登録でき、ワークスペースに属する全てのチャンネルに通知できます。
+1 つの GROWI につき 1 つのワークスペースを登録でき、ワークスペースに属する全てのチャンネルに通知できます。
 
 ## Slack Configuration 設定
 
@@ -13,19 +13,38 @@ GROWI では、 Incoming Webhook を利用した Slack 通知が可能です。
 2. Slack Incoming Webhooks 設定の必要事項を入力し、更新ボタンを押します。
 
 - **Wrbhook URL**  
-[Incoming Webhooks](https://itizawa.slack.com/apps/new/A0F7XDUAZ--incoming-webhook-) で取得できます。
+  [Incoming Webhooks](https://itizawa.slack.com/apps/new/A0F7XDUAZ--incoming-webhook-) で取得できます。
 
 - **Slack アプリより Incoming Webhook を優先する**  
-このオプションをオンにすると、 Slack App が有効になっていても GROWI は Incoming Webhook を使用します。
+  このオプションをオンにすると、 Slack App が有効になっていても GROWI は Incoming Webhook を使用します。
 
 ### 設定が反映されているかの確認
 
-上記の設定後、ページの編集モード画面に Slack 通知フォームが追加されます。  
+上記の設定後、ページの編集モード画面に Slack 通知フォームが追加されます。
 
 ![slack1](./images/slack1.png)
 
 ページの保存・更新時に 入力したチャンネルに Slack 通知が届きます。  
 この方法で通知を行うことを GROWI では **User Trigger Notification** といいます。
+
+#### Slash コマンドの作成
+
+- 作成した Slack App の **Features** から **Slash Commands** をクリックします。
+
+![slash-commands-introduction](./images/slash-commands-introduction.png)
+
+- **Create New Command** をクリックします。
+
+![slash-commands-create-new-command](./images/slash-commands-create-new-command.png)
+
+- Command に growi と入力してください。
+- RequestURL には、ドメイン名/\_api/v3/slack-bot と入力してください。
+- Short Description も入力必須なため、適当なご説明を入力してください。
+- Usage Hint に関しては任意なので、適宜入力してください。
+- Escape channels, users, and links sent to your app に関しては任意なので、適宜入力してください。
+- 入力が完了したら、Save をクリックしてください。
+
+![slash-commands-create](./images/slash-commands-create.png)
 
 ## User Trigger Notification 設定
 
@@ -62,7 +81,7 @@ Wiki 利用者が所定のアクションをしたタイミングで発信され
 4. 通知詳細設定で各種設定を行います。
 
 - 通知機構はトリガーパスで起きるイベントを感知します。  
-例えば `/event/*` と設定した場合、`/event` 配下のページで Global Notification が有効になります。
+  例えば `/event/*` と設定した場合、`/event` 配下のページで Global Notification が有効になります。
 
 ### 通知の有効 / 無効
 
@@ -73,4 +92,4 @@ Global Notification は通常 public なページ内のイベントのみ通知�
 - '自分のみ'に閲覧制限をしているページ
 - '特定グループにのみ'に閲覧制限をしているページ
 
-linkを知っている人のみ閲覧できるページは設定に関わらず常に通知されません。
+link を知っている人のみ閲覧できるページは設定に関わらず常に通知されません。

@@ -27,25 +27,6 @@ GROWI では、 Incoming Webhook を利用した Slack 通知が可能です。
 ページの保存・更新時に 入力したチャンネルに Slack 通知が届きます。  
 この方法で通知を行うことを GROWI では **User Trigger Notification** といいます。
 
-#### Slash コマンドの作成
-
-- 作成した Slack App の **Features** から **Slash Commands** をクリックします。
-
-![slash-commands-introduction](./images/slash-commands-introduction.png)
-
-- **Create New Command** をクリックします。
-
-![slash-commands-create-new-command](./images/slash-commands-create-new-command.png)
-
-- Command に growi と入力してください。
-- RequestURL には、ドメイン名/\_api/v3/slack-bot と入力してください。
-- Short Description も入力必須なため、適当なご説明を入力してください。
-- Usage Hint に関しては任意なので、適宜入力してください。
-- Escape channels, users, and links sent to your app に関しては任意なので、適宜入力してください。
-- 入力が完了したら、Save をクリックしてください。
-
-![slash-commands-create](./images/slash-commands-create.png)
-
 ## User Trigger Notification 設定
 
 通常、通知先のチャンネルを通知する度に入力する必要がありますが、

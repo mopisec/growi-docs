@@ -19,11 +19,11 @@ Slack のワークスペースに GROWI Bot を導入するには、Slack アプ
 
 #### Slash コマンドの作成
 
-- 作成した Slack App の **Features** から **Slash Commands** をクリックします。
+1. 作成した Slack App の **Features** から **Slash Commands** をクリックします。
 
 ![slash-commands-introduction](./images/slash-commands-introduction.png)
 
-- **Create New Command** をクリックします。
+2. **Create New Command** をクリックします。
 
 ![slash-commands-create-new-command](./images/slash-commands-create-new-command.png)
 
